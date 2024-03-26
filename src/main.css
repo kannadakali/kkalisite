@@ -105,3 +105,21 @@ audio {
 #authorName, #storyText {
     text-align: left;
 }
+
+
+.radio-option {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 5px; 
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 5px; 
+}
+
+#recordForm {
+    background-color: #f9f9f9; 
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

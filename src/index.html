@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kannada Story Recording - Login</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="main.css">
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
@@ -15,27 +15,46 @@
     
 </head>
 <body>
-    <div id="authContainer">
-        <div id="loginSection">
-            <h2>Login</h2>
-            <input type="email" id="loginEmail" placeholder="Email">
-            <input type="password" id="loginPassword" placeholder="Password">
-            <p id="loginError" class="error-message"></p>
-            <button id="loginButton">Login</button>
-            <button id="showRegister">Register</button>
-        </div>
+    <div id="mainContent">
+        <h1>ಕನ್ನಡ ಕಲಿ</h1>
+        <h2 id="storyTitle"></h2>
+        <p id="authorName"></p>
 
-        <div id="registerSection" style="display:none;">
-            <h2>Register</h2>
-            <input type="email" id="registerEmail" placeholder="Email">
-            <input type="password" id="registerPassword" placeholder="Password">
-            <p id="registerError" class="error-message"></p>
-            <button id="registerButton">Register</button>
-            <button id="showLogin">Login</button>
-        </div>
+        <p id="storyText"></p>
+        
+        <h3>Record</h3>
+        <form id="recordForm">
+            <label for="studentName">Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <div id="studentCenter">
+                <div class="radio-option">
+                    <input type="radio" id="centerCUP" name="studentCenter" value="CUP">
+                    <label for="centerCUP">CUP</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="centerFRE" name="studentCenter" value="FRE">
+                    <label for="centerFRE">FRE</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="centerMIL" name="studentCenter" value="MIL">
+                    <label for="centerMIL">MIL</label>
+                </div>
+            </div>
+            
+
+            <p>
+                <button type="button" id="record">Record</button>
+                <button type="button" id="stopRecord" disabled>Stop</button>
+            </p>
+            <p>
+                <audio id="recordedAudio"></audio>
+            </p>
+            <button type="button" id="upload">Upload</button>
+        </form>
     </div>
 
-    <button id="adminLoginButton" style="position: absolute; bottom: 20px; width: 90%; max-width: 300px;">Admin Login</button>
+    <button id="adminLoginButton">Admin Login</button>
 
     <script>
         // Redirect to admin login page when the admin login button is clicked
@@ -44,6 +63,6 @@
         });
     </script>
 
-    <script src="login.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

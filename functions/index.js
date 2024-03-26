@@ -28,10 +28,10 @@ exports.sendEmailNotification = functions.storage.object().onFinalize(async (obj
   const filePath = object.name; // File path in the bucket.
   const contentType = object.contentType; // File content type.
 
-  // Exit if this is not an audio file.
-  if (!contentType.startsWith("audio/")) {
-    return functions.logger.log("This is not an audio file.");
-  }
+  // // Exit if this is not an audio file.
+  // if (!contentType.startsWith("audio/")) {
+  //   return functions.logger.log("This is not an audio file.");
+  // }
 
   // Nodemailer setup
   const mailTransport = nodemailer.createTransport({

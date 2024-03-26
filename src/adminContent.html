@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Content</title>
+    <link rel="stylesheet" href="adminContent.css"> <!-- Reference your main CSS file to maintain theme -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage-compat.js"></script>
+    <script src="firebaseInit.js"></script> <!-- Firebase initialization -->
+</head>
+<body>
+    <div class="container">
+        <h1>Audio Management</h1>
+        <section id="CUPAudios" class="audio-section">
+            <h2>Cupertino</h2>
+            <ul id="cupList" class="audio-list"></ul>
+        </section>
+        <section id="FREAudios" class="audio-section">
+            <h2>Fremont</h2>
+            <ul id="freList" class="audio-list"></ul>
+        </section>
+        <section id="MILAudios" class="audio-section">
+            <h2>Milpitas</h2>
+            <ul id="milList" class="audio-list"></ul>
+        </section>        
+    </div>
+    <script src="adminContent.js"></script>
+</body>
+</html>
